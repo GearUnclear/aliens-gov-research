@@ -1,0 +1,78 @@
+# TLS certificate — aliens.gov:443
+# Captured: 2026-04-27T23:57:50Z
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            05:7b:7a:43:37:24:c7:1d:44:9d:83:8c:c9:65:54:e6:d5:c6
+        Signature Algorithm: ecdsa-with-SHA384
+        Issuer: C = US, O = Let's Encrypt, CN = E7
+        Validity
+            Not Before: Mar 14 19:44:01 2026 GMT
+            Not After : Jun 12 19:44:00 2026 GMT
+        Subject: CN = go-vip.co
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:c8:fd:71:79:e5:be:9f:44:39:e9:66:6d:a1:36:
+                    38:27:33:64:16:9c:81:08:3e:50:7c:96:98:05:6a:
+                    40:56:db:4d:65:0f:01:d8:08:a8:39:1c:c3:0d:8c:
+                    cb:8b:19:d5:4d:8a:0c:c2:96:48:3b:69:41:f4:47:
+                    d2:83:46:ed:03
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                0B:38:36:49:C0:D3:F1:BD:41:28:12:9A:61:C1:C8:3B:E7:1E:61:F4
+            X509v3 Authority Key Identifier: 
+                AE:48:9E:DC:87:1D:44:A0:6F:DA:A2:E5:60:74:04:78:C2:9C:00:80
+            Authority Information Access: 
+                CA Issuers - URI:http://e7.i.lencr.org/
+            X509v3 Subject Alternative Name: 
+                DNS:*.go-vip.co, DNS:go-vip.co
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+            X509v3 CRL Distribution Points: 
+                Full Name:
+                  URI:http://e7.c.lencr.org/71.crl
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 64:11:C4:6C:A4:12:EC:A7:89:1C:A2:02:2E:00:BC:AB:
+                                4F:28:07:D4:1E:35:27:AB:EA:FE:D5:03:C9:7D:CD:F0
+                    Timestamp : Mar 14 20:42:31.382 2026 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:89:C3:1D:D2:C8:6A:99:49:46:26:61:
+                                1C:67:DE:5A:1B:2D:69:79:6A:FF:F7:9E:E9:C6:CB:41:
+                                50:44:2E:A3:5E:02:20:4C:FF:55:1C:94:14:1C:55:79:
+                                F6:B1:2C:8F:F5:61:1D:E4:40:AC:FC:9F:DF:C1:E9:C8:
+                                D1:54:4F:02:71:7C:69
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 1A:8B:9D:69:4A:57:98:C8:99:A0:CA:88:BD:F4:8F:C0:
+                                B4:56:60:CC:C3:60:0D:1F:71:F4:69:FF:C7:D1:AC:A3
+                    Timestamp : Mar 14 20:42:34.295 2026 GMT
+                    Extensions: 00:00:05:00:56:D7:52:F9
+                    Signature : ecdsa-with-SHA256
+                                30:46:02:21:00:C5:79:20:56:E4:C8:52:E1:60:36:85:
+                                9D:21:52:BB:08:28:8C:6F:78:0A:F8:EA:E6:26:DF:E8:
+                                CD:ED:AB:60:1A:02:21:00:ED:31:F0:6F:12:2C:79:4C:
+                                D9:4D:6F:F3:60:46:0A:36:40:C1:E8:C2:86:7F:51:95:
+                                DB:3E:02:E9:43:AB:12:CE
+    Signature Algorithm: ecdsa-with-SHA384
+    Signature Value:
+        30:64:02:30:19:9c:7b:f5:9c:38:af:15:e4:68:da:c2:f4:1e:
+        49:4d:dd:4f:79:b7:e8:d3:11:51:5c:2a:d2:06:2d:42:71:b2:
+        e7:63:48:25:19:59:55:b7:62:9f:14:cb:5a:fa:9a:25:02:30:
+        1d:36:08:8e:1e:d0:3c:b2:9c:88:da:c8:9e:94:bb:01:5c:0f:
+        59:f9:5f:47:1e:1e:93:f6:54:db:fa:1b:5d:bc:87:9b:8a:5f:
+        69:14:c1:01:dc:fc:a9:b9:d1:1e:e4:42

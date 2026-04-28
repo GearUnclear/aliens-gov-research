@@ -1,0 +1,55 @@
+# DNS records — aliens.gov & alien.gov
+# Captured: 2026-04-27T23:57:50Z
+
+
+# aliens.gov A
+aliens.gov.		1816	IN	A	192.0.66.230
+
+# aliens.gov AAAA
+aliens.gov.		420	IN	AAAA	2a04:fa87:fffd::c000:42e6
+
+# aliens.gov NS
+aliens.gov.		6927	IN	NS	ernest.ns.cloudflare.com.
+aliens.gov.		6927	IN	NS	wally.ns.cloudflare.com.
+
+# aliens.gov SOA
+aliens.gov.		1527	IN	SOA	ernest.ns.cloudflare.com. dns.cloudflare.com. 2401848668 10000 2400 604800 1800
+
+# aliens.gov MX
+
+# aliens.gov TXT
+aliens.gov.		3327	IN	TXT	"v=spf1 -all"
+
+# aliens.gov CAA
+
+# aliens.gov DS
+
+# aliens.gov DNSKEY
+
+# aliens.gov HINFO
+
+# alien.gov A
+alien.gov.		1995	IN	A	192.0.66.230
+
+# alien.gov AAAA
+alien.gov.		421	IN	AAAA	2a04:fa87:fffd::c000:42e6
+
+# alien.gov NS
+alien.gov.		6927	IN	NS	wally.ns.cloudflare.com.
+alien.gov.		6927	IN	NS	ernest.ns.cloudflare.com.
+
+# alien.gov SOA
+alien.gov.		1800	IN	SOA	ernest.ns.cloudflare.com. dns.cloudflare.com. 2401848668 10000 2400 604800 1800
+
+# alien.gov MX
+
+# alien.gov TXT
+alien.gov.		3600	IN	TXT	"v=spf1 -all"
+
+# alien.gov CAA
+
+# alien.gov DS
+
+# alien.gov DNSKEY
+
+# alien.gov HINFO

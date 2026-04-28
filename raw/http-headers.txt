@@ -1,0 +1,44 @@
+# HTTP headers — aliens.gov & alien.gov
+# Captured: 2026-04-27T23:57:50Z
+
+## https://aliens.gov
+HTTP/2 404 
+server: nginx
+date: Mon, 27 Apr 2026 23:57:50 GMT
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+x-cache: EXPIRED
+x-rq: sea4 0 30 9980
+strict-transport-security: max-age=31536000;includeSubdomains;preload
+
+
+## http://aliens.gov
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Mon, 27 Apr 2026 23:57:50 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: keep-alive
+Location: https://aliens.gov/
+
+
+## https://alien.gov
+HTTP/2 404 
+server: nginx
+date: Mon, 27 Apr 2026 23:57:50 GMT
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+x-rq: sea4 0 30 9980
+x-cache: EXPIRED
+strict-transport-security: max-age=31536000;includeSubdomains;preload
+
+
+## http://alien.gov
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Mon, 27 Apr 2026 23:57:50 GMT
+Content-Type: text/html
+Content-Length: 162
+Connection: keep-alive
+Location: https://alien.gov/
+
