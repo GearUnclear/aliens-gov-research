@@ -3,6 +3,22 @@
 The dossier captures everything currently knowable from open sources. These are the questions
 that the open record cannot yet answer — i.e., the things to keep watching.
 
+## Scorecard, 2026-08-23 — the April questions, answered
+
+| # | April question | Verdict |
+|---|---|---|
+| 1 | Primary records, summaries, or press materials? | **None of the above.** aliens.gov publishes ICE arrest data; UAP records went to war.gov/UFO (PURSUE). |
+| 2 | A public UAP reporting portal? | **No** — the site's only reporting mechanism is an ICE tip line for reporting *people*. |
+| 3 | Will alien.gov serve a different purpose? | **Still unknown** — no reporting documents what the singular domain serves today. |
+| 4 | Who in the White House owns it? | Partially answered: launched and promoted by the White House itself (official X/Facebook accounts); no named program office. |
+| 5 | Who reviews content for declassification? | Answered for the *real* pipeline: PURSUE Task Force + UAP Governance Board (ODNI/FBI/DoW) + AARO; Loeb's Science Advisory Council advises without clearances. |
+| 6 | Launch date? | **2026-05-28** (teased 05-27). |
+| 7 | When does DNS get repointed? | **Never did** — the Automattic edge simply started answering with a redirect to whitehouse.gov/aliens. The "cert change as launch signal" hypothesis was wrong: launch happened with no observable DNS change. |
+| 8 | DNSSEC? | Still unsigned as of 2026-08-23. |
+| 9 | Mail? | SPF still `v=spf1 -all` as of 2026-08-23. |
+| 10 | Does the rollout disclose anything new? | Mixed: PURSUE's five tranches exceed the statutory-rolling-release baseline in volume, but per AARO (and Loeb) contain nothing that changes any official assessment. |
+| 11 | Anything contradicting AARO's no-NHI position? | **No** — position formally restated in the FY2025 annual report. |
+
 ## Content & purpose
 
 1. **Will aliens.gov publish primary records, or only summaries / press materials?** AARO and
@@ -38,15 +54,35 @@ that the open record cannot yet answer — i.e., the things to keep watching.
 11. **Does aliens.gov reveal anything that contradicts AARO's standing public position** that no
     UAP case has been demonstrated to involve non-human technology?
 
+## Open questions, August 2026 edition
+
+1. **What does `alien.gov` (singular) actually serve?** The one domain-level question that
+   survived the launch. Needs a first-hand fetch from an unrestricted network.
+2. **Does the UAP Disclosure Act survive conference?** House-passed (H.R. 8800, 216–212);
+   Senate's S.Amdt. 6344 unresolved. Enactment would create the Review Board and 25-year
+   presumptive-disclosure clock — the first structural change with legal force.
+3. **What happens to Grusch's IG complaint** about alleged off-books DIA funding — and does the
+   ODNI NDA-waiver memo actually produce new internal reporting within its 30-day POC window
+   (deadline ~2026-08-30)?
+4. **Will PURSUE Release 06 sustain the ~monthly cadence** (next expected early September), and
+   does any tranche ever include material AARO classifies as genuinely anomalous rather than
+   unresolved?
+5. **Does the UAP Governance Board ever get a public charter** (Federal Register notice), and
+   does Loeb's council ever get clearances or a budget?
+6. **Does NARA's RG 615 collection accession the PURSUE material**, and on what lag? (No NARA
+   release was confirmed inside the May–Aug window.)
+7. **The aliens.gov data-quality question:** why does the site's "encounters" ticker undercount
+   vs. the Deportation Data Project — methodology, lag, or curation?
+
 ## Things to monitor
 
-- **DNS:** A record changes off `192.0.66.230`, or a new TLS cert with `aliens.gov` as the
-  subject CN.
-- **HTTP:** the 404 turning into a 200 with a real body, or new headers identifying a different
-  origin (e.g. CloudFront, S3, a custom AARO endpoint).
-- **CISA `dotgov-data` repo:** any update to the row in `current-full.csv` (in particular the
-  `Suborganization name` or `Security contact email` fields).
-- **Press briefings:** Karoline Leavitt / Anna Kelly podium remarks; a Pete Hegseth statement;
-  any AARO press release referencing a `.gov` URL.
+- **war.gov/UFO:** new tranche announcements (pattern: `war.gov/medialink/ufo/<MMDDYY>/…`);
+  the release CSV manifests.
+- **congress.gov:** FY2027 NDAA conference report — search for UAPDA/Title XVIII language.
+- **aaro.mil:** case-resolution reports; any revision to the "no verifiable evidence" line.
+- **DNS (both domains):** still worth a periodic capture — an A-record move off `192.0.66.230`
+  or a first-party TLS cert would signal a real (non-redirect) site build-out.
+- **`alien.gov`:** HTTP behavior — the last unobserved surface of the original story.
+- **Press briefings:** Leavitt/Kelly podium remarks; Hegseth statements; AARO releases.
 - **GitHub:** the [cisagov/dotgov-data](https://github.com/cisagov/dotgov-data) repo's nightly
   diff for changes to `aliens.gov` / `alien.gov` rows.

@@ -1,53 +1,66 @@
 # aliens-gov-research
 
 Research dossier on **aliens.gov** (and its sibling **alien.gov**) — two U.S. government domains
-registered on **2026-03-17** by the **Executive Office of the President / White House Office**, in the
-wake of President Trump's February 2026 directive to release federal records on UAP / UFO / alien
-material.
+registered on **2026-03-17** by the **Executive Office of the President / White House Office** in
+the wake of President Trump's February 2026 directive to release federal records on UAP / UFO /
+alien material — and on what that directive actually produced.
 
-As of the snapshot date below, neither domain hosts a public website. The dossier collects
-everything that can be learned about them right now from open sources: registry data, DNS, TLS,
-hosting forensics, news coverage, and expert prediction.
+**Read the dossier as a site: [`index.html`](index.html)** (static, no build step — serve the
+repo root or open the file). Styled by [`assets/ctrl-txt.css`](assets/ctrl-txt.css), a
+control-character / plaintext-terminal stylesheet written for this dossier.
 
-## Snapshot date
+## Snapshot dates
 
-All data captured **2026-04-27** unless noted. Re-run the recon script (see
-[`technical-recon.md`](technical-recon.md)) to refresh.
+- **Rev 1 — 2026-04-27:** both domains parked (404) on WordPress VIP; purpose unknown.
+- **Rev 2 — 2026-08-23:** the answer arrived, in two parts.
 
-## TL;DR
+## TL;DR (rev 2)
 
-- **Domains:** `aliens.gov`, `alien.gov`
-- **Created:** 2026-03-17 18:55:49 UTC (`aliens.gov`) / 2026-03-17 18:57:00 UTC (`alien.gov`)
-- **Sponsoring agency (per CISA `dotgov-data` CSV):** Executive Office of the President — White
-  House Office, Washington, DC
-- **Registry contact org (WHOIS):** Cybersecurity and Infrastructure Security Agency
-  *(this is the .gov registry, not the sponsor — every .gov shows this)*
-- **Nameservers:** `ernest.ns.cloudflare.com`, `wally.ns.cloudflare.com` (Cloudflare)
-- **A record:** `192.0.66.230` (Automattic, Inc. — WordPress.com / WordPress VIP)
-- **TLS cert presented:** Let's Encrypt cert for `*.go-vip.co` — a **WordPress VIP Enterprise** SAN
-- **HTTP response:** `404` from nginx with HSTS preload set; HTTP→HTTPS redirect in place
-- **SPF:** `v=spf1 -all` (no mail authorized — anti-spoofing posture)
-- **DNSSEC:** unsigned
-
-The forensic picture: the domains are **parked on WordPress VIP Enterprise**, the same managed
-hosting platform that has historically hosted whitehouse.gov. That's a strong signal the eventual
-site is intended to be a CMS-driven WordPress property, not a static file dump or a bare API
-endpoint.
+- **aliens.gov went live 2026-05-28 — and it is not about UFOs.** It redirects to
+  `whitehouse.gov/aliens`, an *X-Files*-styled immigration-enforcement dashboard ("THEY WALK
+  AMONG US"): a live ICE arrest map, an "encounters" ticker, and an ICE tip-line button.
+  "Aliens" means non-citizens. No UAP record has ever been published there.
+- **The actual UAP disclosure runs through `war.gov/UFO`** under **PURSUE** (*Presidential
+  Unsealing and Reporting System for UAP Encounters*): five file tranches between 2026-05-08 and
+  2026-08-07 (~375–379 files, multi-GB bundles), an AARO FY2025 annual report, an ODNI
+  NDA-waiver memo, a new interagency UAP Governance Board, and a UAP Science Advisory Council
+  chaired by Avi Loeb.
+- **The official bottom line is unchanged:** after all of it, AARO maintains no case shows
+  verifiable evidence of extraterrestrial technology or beings; hundreds remain unresolved.
+- **The UAP Disclosure Act passed the House** inside the FY2027 NDAA (216–212, 2026-07-22) —
+  its first chamber passage — and awaits Senate action / conference.
+- **Infrastructure never moved:** both domains still sit on Cloudflare NS + the Automattic
+  /WordPress VIP edge (`192.0.66.230`), byte-for-byte identical April → August. The launch was
+  a tenant-side redirect flip, invisible to DNS monitoring.
+- **`alien.gov` (singular) remains unobserved** — no reporting documents what it serves today.
 
 ## What's in this repo
 
 | File | What it covers |
 |---|---|
-| [`timeline.md`](timeline.md) | Chronological events from Trump's Feb 2026 directive through registration and afterward |
-| [`technical-recon.md`](technical-recon.md) | DNS, WHOIS, TLS, HTTP, hosting analysis with reproducible commands |
-| [`news-coverage.md`](news-coverage.md) | Per-outlet summary of coverage (DefenseScoop, 404 Media, Newsweek, Vice, AV Club, etc.) |
-| [`expert-perspectives.md`](expert-perspectives.md) | Avi Loeb's predictions; what scientists and AARO insiders are saying |
-| [`open-questions.md`](open-questions.md) | What is still unknown — the things to watch for |
-| [`sources.md`](sources.md) | Every URL referenced, with access date |
-| [`raw/`](raw/) | Captured WHOIS, DNS, TLS, HTTP responses, and the relevant rows of CISA's `dotgov-data` registry |
+| [`index.html`](index.html) | The whole dossier as a single-page site (ctrl-txt style) |
+| [`timeline.md`](timeline.md) | Chronology: Feb 2026 directive → registration → launch → five PURSUE releases → NDAA vote |
+| [`disclosure-releases.md`](disclosure-releases.md) | The PURSUE release catalog, institutional documents, legislative track |
+| [`technical-recon.md`](technical-recon.md) | DNS, WHOIS, TLS, HTTP, hosting analysis; April capture + August re-check |
+| [`news-coverage.md`](news-coverage.md) | Per-outlet coverage, March registration cycle + May–June launch cycle |
+| [`expert-perspectives.md`](expert-perspectives.md) | Loeb (now inside the tent), AARO, whistleblowers, skeptics — and how the March predictions aged |
+| [`open-questions.md`](open-questions.md) | April questions scored; the August open set |
+| [`sources.md`](sources.md) | Every URL referenced, with access dates and reliability flags |
+| [`documents/manifest.json`](documents/manifest.json) | Machine-readable document archive index (mirrored vs. link-only, with reasons) |
+| [`raw/`](raw/) | Captured WHOIS, DNS (Apr + Aug), TLS, HTTP, and .gov registry rows |
+
+## Document archive status
+
+A mirror pass ran 2026-08-23: **0 of 14 documents could be stored** — the research container's
+egress proxy blocks all .gov/.mil hosts, and the PURSUE bundles (70 MB–1.14 GB) exceed the
+25 MB mirror policy regardless. Every entry in the manifest is an honest direct link with a
+`reason` field (`too-large` / `egress-blocked` / `url-unconfirmed`), and the site UI badges each
+one. Re-running the pass from an unrestricted network will flip eligible entries to `mirrored`
+in place.
 
 ## Disclaimer
 
-This is open-source research compiled from public records and publicly available news reporting.
-Nothing here is from a privileged source. Where reporting conflicts (e.g. on whether the registrant
-is "the White House", "EOP", or "CISA"), the dossier shows the conflict rather than pick a winner.
+Open-source research compiled from public records and publicly available reporting. Nothing
+here is from a privileged source. August page-level claims about .gov/.mil sites rest on
+search-indexed reporting (the container cannot fetch those hosts directly) and are flagged
+in-text. Where reporting conflicts, the dossier shows the conflict rather than pick a winner.

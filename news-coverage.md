@@ -70,6 +70,49 @@ deception or "elaborate hazing."
 Enthusiast-press framing. Treats the registration as a strong signal of imminent disclosure;
 adds no new facts beyond what mainstream outlets reported.
 
+## The launch cycle (May–June 2026)
+
+Added 2026-08-23. The March coverage above asked *what will aliens.gov be?* The answer split
+into two stories.
+
+### The bait-and-switch story (aliens.gov)
+
+- **White House (X/Facebook, 2026-05-27)** — the primary source itself: "They walk among us"
+  teaser video, followed by the 2026-05-28 launch of the redirect to **whitehouse.gov/aliens**.
+- **NBC4 Washington (2026-05-29)** — confirms launch mechanics and immigrant-rights criticism.
+- **TMZ (2026-05-29)** — teaser-video and site-feature rundown for a general audience.
+- **Fox News / Townhall / Newsmax (2026-05-29)** — sympathetic framing: trolling immigration
+  critics; Townhall carries the only official WH statement: *"President Trump was the first to
+  call out the real danger Aliens pose…"*
+- **TheWrap / HuffPost (~2026-05-30)** — documents the backlash ("bait-and-switch," "fascist
+  garbage" reaction quotes from social media).
+- **NPR (2026-06-03)** — the most detailed independent walkthrough; flags that the site's
+  "encounters" ticker appears to *undercount* vs. the Deportation Data Project's 300k+ figure —
+  a data-accuracy finding.
+- **CNN (2026-06-03)** — "Word of the Week" language analysis: exploiting UFO intrigue to demean
+  immigrants.
+- **Just Security (~2026-06)** — legal/policy analysis under a dangerous-speech framework.
+- **NewsNation (~2026-06)** — UAP journalist **Ross Coulthart** calls the site a "puerile
+  effort" that damages genuine disclosure advocacy — the UAP community reacting to being used
+  as the setup for a punchline.
+- **The Conversation (~2026-08)** — academic analysis of the page's dehumanization framing;
+  evidence the controversy had legs into late summer.
+
+### The actual-disclosure story (war.gov/UFO)
+
+- **NPR / Stars and Stripes / Al Jazeera (2026-05-08)** — PURSUE Release 01 launch coverage;
+  Al Jazeera captures the administration's framing: let people "make up their own minds."
+- **CBS News / EarthSky (2026-05-22, 06-12, 07-10, 08-07)** — the most consistent per-tranche
+  beat coverage of Releases 02–05.
+- **The Hill / MeriTalk (2026-07-10)** — Release 04, DOE material.
+- **Axios (2026-06-12)** — Release 03, incl. the purported CIA-destroyed "message from space."
+- **The Black Vault / Fox News (~2026-07-21)** — AARO FY2025 annual report: late, 319 new cases,
+  no ET evidence. Greenewald documents the statutory-deadline miss.
+- **Newsweek / UNILAD (2026-08-11)** — Release 05 details, FBI records of 2026 sightings.
+- **TIME (2026-08-06)** — cover feature *"America Is Finally Taking Extraterrestrials
+  Seriously"* — the dominant legacy-media synthesis of the whole window (no NYT/WaPo/New
+  Yorker/Atlantic investigation surfaced in this period).
+
 ## Patterns across coverage
 
 | Outlet stance | Outlets |
@@ -85,3 +128,8 @@ Common gaps across **all** mainstream coverage:
 - No outlet has a confirmed source on **what content is planned**. The Anna Kelly
   *"Stay tuned!"* line is the only on-record signal.
 - No outlet has a confirmed **launch date**.
+
+*(Update, 2026-08-23: all three March-era gaps are now closed — launch 2026-05-28, content an
+ICE-enforcement dashboard at whitehouse.gov/aliens, and the WordPress VIP fingerprint explained
+by the redirect into whitehouse.gov. One gap persists: no outlet has documented what
+`alien.gov` (singular) currently serves.)*

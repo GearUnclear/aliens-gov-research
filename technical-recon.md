@@ -3,6 +3,31 @@
 Reproducible, OSINT-only. Every command below was run against `aliens.gov` and `alien.gov` from
 this host on **2026-04-27**. Raw outputs are preserved in [`raw/`](raw/).
 
+## 2026-08-23 re-check
+
+A fresh DNS capture ([`raw/dns-records-2026-08-23.txt`](raw/dns-records-2026-08-23.txt), taken via
+dnspython from a container without `dig`) shows the infrastructure **byte-for-byte unchanged**
+since April:
+
+| Record | 2026-04-27 | 2026-08-23 |
+|---|---|---|
+| `A` | `192.0.66.230` (Automattic) | `192.0.66.230` — unchanged |
+| `AAAA` | `2a04:fa87:fffd::c000:42e6` | unchanged |
+| `NS` | `ernest`/`wally.ns.cloudflare.com` | unchanged |
+| `TXT` | `v=spf1 -all` | unchanged |
+| `MX` | none | none |
+
+The April hosting-forensic conclusion — *"the domains will host a content site, eventually,"
+CMS-driven on WordPress VIP* — was **half right**. Per reporting (see
+[`timeline.md`](timeline.md)), `aliens.gov` went live **2026-05-28** as a **redirect to
+`whitehouse.gov/aliens`**, a WordPress-VIP-hosted White House page. The Automattic A record was
+never repointed because it never needed to be: the VIP edge now answers for `aliens.gov` with a
+redirect into whitehouse.gov instead of the platform 404.
+
+*(No fresh HTTP/TLS capture accompanies the August snapshot: the research container's egress
+proxy blocks direct connections to the domains. HTTP-layer behavior above is from news reporting,
+not first-hand capture — flagged accordingly.)*
+
 ## Registry (WHOIS)
 
 ```bash

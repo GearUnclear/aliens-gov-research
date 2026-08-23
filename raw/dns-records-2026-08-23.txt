@@ -1,0 +1,22 @@
+; Fresh DNS capture 2026-08-23T17:39:02.207959+00:00
+; Captured from Claude Code remote container via dnspython (dig unavailable).
+; Direct HTTPS to the domains is blocked by this container's egress policy,
+; so no fresh HTTP/TLS capture accompanies this snapshot.
+aliens.gov. 3071 IN A 192.0.66.230
+aliens.gov. 124 IN AAAA 2a04:fa87:fffd::c000:42e6
+aliens.gov. 21600 IN NS wally.ns.cloudflare.com.
+aliens.gov. 21600 IN NS ernest.ns.cloudflare.com.
+aliens.gov. 1775 IN SOA ernest.ns.cloudflare.com. dns.cloudflare.com. 2410734361 10000 2400 604800 1800
+; aliens.gov MX: no answer
+aliens.gov. 3600 IN TXT "v=spf1 -all"
+; aliens.gov CAA: no answer
+; aliens.gov HINFO: no answer
+alien.gov. 3071 IN A 192.0.66.230
+alien.gov. 239 IN AAAA 2a04:fa87:fffd::c000:42e6
+alien.gov. 21600 IN NS ernest.ns.cloudflare.com.
+alien.gov. 21600 IN NS wally.ns.cloudflare.com.
+alien.gov. 1800 IN SOA ernest.ns.cloudflare.com. dns.cloudflare.com. 2412969388 10000 2400 604800 1800
+; alien.gov MX: no answer
+alien.gov. 3600 IN TXT "v=spf1 -all"
+; alien.gov CAA: no answer
+; alien.gov HINFO: no answer

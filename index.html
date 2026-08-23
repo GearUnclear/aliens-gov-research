@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALIENS.GOV — DISCLOSURE DOSSIER</title>
+<meta name="description" content="Open-source research dossier on aliens.gov, alien.gov, and the 2026 U.S. government UAP disclosure program (PURSUE).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230a0e0b'/%3E%3Ctext x='8' y='12' font-size='11' text-anchor='middle' fill='%2356e879' font-family='monospace'%3E%E2%96%B2%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/ctrl-txt.css">
+</head>
+<body>
+<main>
+
+<header class="mast">
+  <div class="row">
+    <span>FILE: AGR-2026-001 / REV 2</span>
+    <span>UNCLASSIFIED // OPEN SOURCE</span>
+  </div>
+  <div class="title">ALIENS.GOV — DISCLOSURE DOSSIER<span class="cursor">&nbsp;</span></div>
+  <div class="row">
+    <span>SNAPSHOT 2026-08-23</span>
+    <span>PREV 2026-04-27</span>
+    <span>REGISTERED 2026-03-17</span>
+  </div>
+</header>
+
+<p><strong>What this is.</strong> A research dossier on <code>aliens.gov</code> and
+<code>alien.gov</code> — two domains registered by the Executive Office of the President in
+March 2026, in the wake of President Trump's February 2026 directive to release federal UAP/UFO
+records — and on what that directive actually produced. Compiled from public records, DNS
+forensics, and news reporting. Nothing here is from a privileged source.</p>
+
+<div class="note">
+  <strong>THE TWIST (MAY 2026):</strong> aliens.gov launched — and it isn't about UFOs. The
+  domain redirects to an immigration-enforcement dashboard styled like the <em>X-Files</em>.
+  The actual UAP records went to a different domain entirely: <strong>war.gov/UFO</strong>,
+  under a program called <strong>PURSUE</strong>. Both stories are documented below.
+</div>
+
+<nav class="toc" aria-label="Contents">
+  <ul>
+    <li><a href="#status"><span class="sec-no">§1</span> STATUS BOARD</a></li>
+    <li><a href="#timeline"><span class="sec-no">§2</span> TIMELINE</a></li>
+    <li><a href="#recon"><span class="sec-no">§3</span> TECHNICAL RECON</a></li>
+    <li><a href="#disclosures"><span class="sec-no">§4</span> DISCLOSURE RELEASES (PURSUE)</a></li>
+    <li><a href="#archive"><span class="sec-no">§5</span> DOCUMENT ARCHIVE</a></li>
+    <li><a href="#coverage"><span class="sec-no">§6</span> COVERAGE</a></li>
+    <li><a href="#experts"><span class="sec-no">§7</span> EXPERT PERSPECTIVES</a></li>
+    <li><a href="#questions"><span class="sec-no">§8</span> OPEN QUESTIONS</a></li>
+    <li><a href="#colophon"><span class="sec-no">§9</span> SOURCES &amp; COLOPHON</a></li>
+  </ul>
+</nav>
+
+<h2 id="status"><span class="sec-no">§1</span> STATUS BOARD</h2>
+
+<dl class="kv">
+  <dt>aliens.gov</dt>
+  <dd><span class="chip live">LIVE</span> since 2026-05-28 — redirects to
+      <code>whitehouse.gov/aliens</code>, an ICE immigration-enforcement dashboard
+      (<em>"THEY WALK AMONG US"</em>). <strong>Hosts no UAP records.</strong></dd>
+  <dt>alien.gov</dt>
+  <dd><span class="chip hollow">UNOBSERVED</span> — same infrastructure as aliens.gov; current
+      HTTP behavior undocumented by any reporting. The last open surface of the original story.</dd>
+  <dt>UAP records</dt>
+  <dd><span class="chip live">LIVE</span> at <code>war.gov/UFO</code> — PURSUE program, five
+      release tranches 2026-05-08 → 2026-08-07, ~375–379 files total.</dd>
+  <dt>Official position</dt>
+  <dd>Unchanged after five releases: <strong>no verifiable evidence of extraterrestrial
+      technology or beings</strong> (AARO FY2025 annual report, ~2026-07-21). Hundreds of cases
+      formally unresolved.</dd>
+  <dt>Legislation</dt>
+  <dd>UAP Disclosure Act passed the House inside the FY2027 NDAA, 216–212 (2026-07-22).
+      Senate action pending → conference.</dd>
+  <dt>Infrastructure</dt>
+  <dd>Both domains: Cloudflare NS + Automattic/WordPress-VIP edge (<code>192.0.66.230</code>),
+      byte-for-byte unchanged April → August. SPF <code>v=spf1 -all</code>, DNSSEC unsigned.</dd>
+</dl>
+
+<h2 id="timeline"><span class="sec-no">§2</span> TIMELINE</h2>
+
+<p class="stamp">● = new since the April snapshot</p>
+
+<ol class="tl">
+  <li><span class="d">2026-02-19</span><span>Trump directs agencies to identify and release federal records on UAP/UFOs and "alien and extraterrestrial life," citing "the tremendous interest shown" by the public.</span></li>
+  <li><span class="d">2026-02-25</span><span>Defense Secretary Hegseth commits the Pentagon to compliance. AARO caseload exceeds 2,000; insiders: none demonstrate non-human technology.</span></li>
+  <li><span class="d">2026-03-17</span><span><code>aliens.gov</code> created 18:55:49 UTC by the Executive Office of the President / White House Office; <code>alien.gov</code> follows 71 seconds later.</span></li>
+  <li><span class="d">2026-03-18</span><span>A Bluesky domain-monitor bot surfaces the registrations; 404 Media breaks the story; DefenseScoop, Newsweek, Vice et al. follow. White House deputy press secretary Anna Kelly: <em>"Stay tuned!"</em> 👽</span></li>
+  <li><span class="d">2026-04-27</span><span>First dossier snapshot: both domains parked on WordPress VIP Enterprise (404, wildcard <code>*.go-vip.co</code> cert). Forensic call: a CMS-driven content site is coming.</span></li>
+  <li class="new"><span class="d">2026-05-01</span><span>Department of War stands up the <strong>PURSUE Task Force</strong> (Presidential Unsealing and Reporting System for UAP Encounters) — the directive's actual implementation vehicle.</span></li>
+  <li class="new"><span class="d">2026-05-08</span><span><strong>PURSUE Release 01</strong> at war.gov/UFO: 162 files, 400+ incidents, 1944–2026. Gemini 7 "bogey" audio, Apollo-era imagery. Portal reportedly takes 1.7B hits. <strong>The records went to war.gov — not aliens.gov.</strong></span></li>
+  <li class="new"><span class="d">2026-05-15</span><span>Reps. Luna and Burlison privately review classified UAP videos with AARO Director Kosloski, after a missed Pentagon deadline on Luna's demand for 46 videos.</span></li>
+  <li class="new"><span class="d">2026-05-22</span><span><strong>PURSUE Release 02</strong>: 64 files, first audio; Lake Huron F-16 shootdown footage; ~5.3 GB of video.</span></li>
+  <li class="new"><span class="d">2026-05-27</span><span>Burlison serves MITRE Corp. with legislative interrogatories covering UAP records back to 1930. That evening, the White House posts the <em>"They walk among us"</em> teaser.</span></li>
+  <li class="new"><span class="d">2026-05-28</span><span><strong>aliens.gov goes live as an immigration-enforcement site</strong> — redirect to whitehouse.gov/aliens: <em>X-Files</em>-styled ICE arrest map, "encounters" ticker, ICE tip-line button. "Aliens" = non-citizens.</span></li>
+  <li class="new"><span class="d">2026-05-29</span><span>Backlash cycle: immigrant-rights groups and UAP advocates condemn the bait-and-switch (Coulthart: "puerile effort"); conservative outlets celebrate the troll; NPR later flags the arrest ticker undercounting vs. Deportation Data Project.</span></li>
+  <li class="new"><span class="d">2026-06-09</span><span>Capitol Hill press conference: whistleblower David Grusch alleges billions in off-books DIA "slush fund" UAP spending; files an IG complaint.</span></li>
+  <li class="new"><span class="d">2026-06-12</span><span><strong>PURSUE Release 03</strong>: 72 files from FBI/CIA/NASA/DoW — CIA Harare disc report, 1949 Army saucer study. Same day: Spielberg's <em>Disclosure Day</em> opens nationwide.</span></li>
+  <li class="new"><span class="d">2026-06-16</span><span>ODNI + FBI + DoW establish the <strong>UAP Governance Board</strong> — announced only via written statement to two journalists; no Federal Register notice.</span></li>
+  <li class="new"><span class="d">2026-06-17</span><span><strong>UAP Science Advisory Council</strong> forms under Avi Loeb: unpaid, unbudgeted, no classified access; membership drawn largely from his Galileo Project network, plus skeptic Michael Shermer.</span></li>
+  <li class="new"><span class="d">2026-06-25</span><span>Disclosure Forum 2026 in the Russell Senate Office Building; Schumer/Rounds recommit to the UAP Disclosure Act.</span></li>
+  <li class="new"><span class="d">2026-07-10</span><span><strong>PURSUE Release 04</strong>: 40 files; first DOE material — Pantex plant sightings, 1949 Los Alamos "green fireballs."</span></li>
+  <li class="new"><span class="d">2026-07-21</span><span><strong>AARO FY2025 annual report</strong> (late): 319 new reports, 114 resolved mundane, caseload 1,870; Virginia-coast Navy mass-sighting case; no verifiable ET evidence.</span></li>
+  <li class="new"><span class="d">2026-07-22</span><span><strong>House passes FY2027 NDAA 216–212 with the UAP Disclosure Act attached</strong> — NARA records collection, independent review board, 25-year presumptive disclosure. First chamber passage ever.</span></li>
+  <li class="new"><span class="d">2026-07-31</span><span>ODNI memo (Lukas, ES 2026-00818): NDAs and oaths do not bar UAP reporting to AARO/PURSUE; IC elements must name PURSUE POCs within 30 days.</span></li>
+  <li class="new"><span class="d">2026-08-07</span><span><strong>PURSUE Release 05</strong>: 41 files — first FBI FD-302 witness interviews, 2021 Gulf of Oman mass sighting (~25 UAP), 2002 Bagram triangle.</span></li>
+  <li class="new"><span class="d">2026-08-23</span><span>This snapshot. DNS unchanged since April; Senate NDAA unresolved; PURSUE cadence suggests a Release 06 in early September.</span></li>
+</ol>
+
+<h2 id="recon"><span class="sec-no">§3</span> TECHNICAL RECON</h2>
+
+<p>Full methodology and April captures in
+<a href="technical-recon.md">technical-recon.md</a>. The August re-check found the DNS posture
+<strong>byte-for-byte unchanged</strong> — which is itself the finding:</p>
+
+<div class="tbl-wrap"><table>
+  <tr><th>Surface</th><th>2026-04-27</th><th>2026-08-23</th></tr>
+  <tr><td>A / AAAA</td><td><code>192.0.66.230</code> · Automattic (WordPress VIP)</td><td>unchanged</td></tr>
+  <tr><td>NS</td><td><code>ernest</code>/<code>wally.ns.cloudflare.com</code></td><td>unchanged</td></tr>
+  <tr><td>SPF</td><td><code>v=spf1 -all</code> (no mail, anti-spoof)</td><td>unchanged</td></tr>
+  <tr><td>DNSSEC</td><td>unsigned</td><td>unsigned</td></tr>
+  <tr><td>HTTP</td><td>404 (platform placeholder, <code>*.go-vip.co</code> cert)</td><td>redirect → <code>whitehouse.gov/aliens</code> <span class="src">(per reporting; egress-blocked from this container)</span></td></tr>
+</table></div>
+
+<p>The April forensic conclusion — <em>"the domains will host a content site, eventually,"
+CMS-driven on WordPress VIP</em> — was vindicated on infrastructure and upended on content. The
+launch happened with <strong>no observable DNS change at all</strong>: the Automattic edge that
+served the 404 simply began answering with a redirect into whitehouse.gov (itself WordPress
+VIP). Lesson for domain-watchers: a tenant-side flip is invisible to DNS monitoring.</p>
+
+<details class="raw">
+  <summary>raw/dns-records-2026-08-23.txt</summary>
+<pre><code>aliens.gov. 3096  IN A    192.0.66.230
+aliens.gov. 1920  IN AAAA 2a04:fa87:fffd::c000:42e6
+aliens.gov. 21600 IN NS   ernest.ns.cloudflare.com.
+aliens.gov. 21600 IN NS   wally.ns.cloudflare.com.
+aliens.gov. 1800  IN SOA  ernest.ns.cloudflare.com. dns.cloudflare.com. 2410734361 ...
+aliens.gov. 3600  IN TXT  "v=spf1 -all"
+; aliens.gov MX / CAA / HINFO: no answer
+alien.gov.  1322  IN A    192.0.66.230
+alien.gov.  1578  IN AAAA 2a04:fa87:fffd::c000:42e6
+alien.gov.  21600 IN NS   wally.ns.cloudflare.com.
+alien.gov.  21600 IN NS   ernest.ns.cloudflare.com.
+alien.gov.  3600  IN TXT  "v=spf1 -all"
+; alien.gov  MX / CAA / HINFO: no answer</code></pre>
+</details>
+
+<h2 id="disclosures"><span class="sec-no">§4</span> DISCLOSURE RELEASES (PURSUE)</h2>
+
+<p><strong>PURSUE</strong> — <em>Presidential Unsealing and Reporting System for UAP
+Encounters</em>. Interagency task force (White House, ODNI, DOE, NASA, FBI, AARO/Pentagon)
+stood up 2026-05-01; releases at
+<a class="ext" href="https://www.war.gov/ufo/">war.gov/UFO</a>. Details and per-release source
+URLs in <a href="disclosure-releases.md">disclosure-releases.md</a>.</p>
+
+<div class="tbl-wrap"><table>
+  <tr><th>Rel</th><th>Date</th><th>Contents (as announced)</th><th>Size (reported)</th></tr>
+  <tr><td>01</td><td>2026-05-08</td><td>162 files · 400+ incidents, 1944–2026 · DoD/DoW, FBI, NASA, State. Gemini 7 audio, Apollo imagery, 1947–68 disc reports.</td><td class="num">~1.14 GB</td></tr>
+  <tr><td>02</td><td>2026-05-22</td><td>64 files · first PURSUE audio · Lake Huron F-16 shootdown footage · 4-object formation near Iran.</td><td class="num">~70 MB + ~5.3 GB video</td></tr>
+  <tr><td>03</td><td>2026-06-12</td><td>72 files · FBI (29), CIA (18), DoW (12), NASA (11) · Harare disc report, 1949 Army saucer study, Gordon Cooper audio.</td><td class="num">~826 MB + ~4.6 GB video</td></tr>
+  <tr><td>04</td><td>2026-07-10</td><td>40 files · first DOE material: Pantex sightings, Los Alamos "green fireballs" · Project Sign (1948) → 2025.</td><td class="num">~227 MB</td></tr>
+  <tr><td>05</td><td>2026-08-07</td><td>41 files · first FBI FD-302 witness interviews w/ renderings · Gulf of Oman 2021 (~25 UAP) · Bagram 2002 triangle.</td><td class="num">portal only</td></tr>
+</table></div>
+
+<h3>Oversight created in the window</h3>
+<ul>
+  <li><strong>UAP Governance Board</strong> (ODNI/FBI/DoW, first met 2026-06-16) — declassification coordination under EO 13526. No public charter located.</li>
+  <li><strong>UAP Science Advisory Council</strong> (2026-06-17, chair Avi Loeb) — advisory only: unpaid, unbudgeted, no clearances.</li>
+  <li><strong>ODNI NDA-waiver guidance</strong> (2026-07-31) — sanctioned internal reporting channel to AARO/PURSUE; not public disclosure.</li>
+</ul>
+
+<h3>Legislative track</h3>
+<ul>
+  <li><strong>2026-07-22</strong> — House passes FY2027 NDAA (H.R. 8800) <strong>216–212</strong> with Burlison's UAP Disclosure Act amendment (<a class="ext" href="https://clerk.house.gov/Votes/2026278">Roll Call 278</a>).</li>
+  <li><strong>~2026-07-15</strong> — Schumer/Rounds file revised UAPDA as S.Amdt. 6344; Senate floor action incomplete → conference.</li>
+  <li>Parked: H.R. 1187 (UAP Transparency Act), H.R. 5060 (UAP Whistleblower Protection Act).</li>
+</ul>
+
+<h2 id="archive"><span class="sec-no">§5</span> DOCUMENT ARCHIVE</h2>
+
+<div class="note">
+  <strong>ARCHIVE NOTICE:</strong> A mirror pass was attempted 2026-08-23. The research
+  container's egress proxy denies CONNECT to all .gov/.mil hosts, so <strong>0 of 14 documents
+  could be stored locally</strong> — every entry below is a direct link, flagged with why it
+  isn't mirrored. Oversized bundles (&gt;25 MB) are link-only by policy regardless.
+  The machine-readable index is <a href="documents/manifest.json">documents/manifest.json</a>,
+  structured so a re-run from an unrestricted network can flip entries to
+  <span class="badge mirrored">MIRRORED</span> in place.
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.aaro.mil/Portals/136/PDFs/FY25%20UAP%20Annual%20Report/AARO_FY2025_Consolidated_Annual_Report_on_UAP.pdf">AARO FY2025 Consolidated Annual Report on UAP</a></span>
+  <span><span class="badge linked">LINK · PDF · NOT MIRRORED (EGRESS)</span></span></div>
+  <div class="doc-meta">DoD / AARO · ~2026-07-21</div>
+  <p>The statutory annual report: 319 new UAP reports (Jun 2024–May 2025), 114 resolved as mundane, caseload 1,870, no verified extraterrestrial technology.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://burlison.house.gov/sites/evo-subsites/burlison.house.gov/files/evo-media-document/memorandum_2026.pdf">ODNI Preliminary NDA-Waiver Guidance Memo</a></span>
+  <span><span class="badge linked">LINK · PDF · NOT MIRRORED (EGRESS)</span></span></div>
+  <div class="doc-meta">ODNI (Aaron Lukas, ES 2026-00818) · 2026-07-31 · released via Rep. Burlison's office</div>
+  <p>NDAs and secrecy oaths do not bar reporting UAP information through AARO/PURSUE channels; IC elements must designate PURSUE POCs within 30 days.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://burlison.house.gov/sites/evo-subsites/burlison.house.gov/files/evo-media-document/mitre_uap-legislative-interrogatories_press.pdf">Burlison–MITRE Legislative Interrogatories</a></span>
+  <span><span class="badge linked">LINK · PDF · NOT MIRRORED (EGRESS)</span></span></div>
+  <div class="doc-meta">House Oversight Task Force · ~2026-05-27</div>
+  <p>Document-preservation demands to MITRE covering UAP-related records dating to 1930, including alleged crash-retrieval / reverse-engineering program material.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://oversight.house.gov/wp-content/uploads/2026/03/UAP-Request-Letter-FINAL.pdf">House Oversight UAP Request Letter</a></span>
+  <span><span class="badge linked">LINK · PDF · NOT MIRRORED (EGRESS)</span></span></div>
+  <div class="doc-meta">House Oversight · 2026-03</div>
+  <p>Committee letter requesting UAP-related records and testimony from executive-branch agencies.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.armed-services.senate.gov/imo/media/doc/fy2027_ndaa_exsum.pdf">FY2027 NDAA Executive Summary (SASC markup)</a></span>
+  <span><span class="badge linked">LINK · PDF ~1–3 MB · NOT MIRRORED (EGRESS)</span></span></div>
+  <div class="doc-meta">Senate Armed Services · 2026-06</div>
+  <p>Markup summary; context for the UAP Disclosure Act provisions carried into the FY2027 NDAA fight.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-release001.csv">PURSUE Release 01 — CSV manifest</a></span>
+  <span><span class="badge linked">LINK · CSV · NOT MIRRORED (EGRESS)</span></span></div>
+  <div class="doc-meta">Department of War · 2026-05-08</div>
+  <p>Machine-readable index of the 262 files in Release 01.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.war.gov/medialink/ufo/bundle/Release_1.zip">PURSUE Release 01 — full bundle</a></span>
+  <span><span class="badge linked">EXTERNAL · ZIP · 1.14 GB — TOO LARGE TO MIRROR</span></span></div>
+  <div class="doc-meta">Department of War · 2026-05-08 · 262 files</div>
+  <p>First PURSUE archival release: reports, photos, videos, witness accounts, military records, astronaut transcripts, 1944–2026.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.war.gov/medialink/ufo/052226/release_02/release_02_document_bundle.zip">PURSUE Release 02 — document bundle</a></span>
+  <span><span class="badge linked">EXTERNAL · ZIP · ~70 MB — TOO LARGE TO MIRROR</span></span></div>
+  <div class="doc-meta">Department of War · 2026-05-22 · 64 files (video bundle ~5.3 GB, via portal)</div>
+  <p>First audio material published under PURSUE; Lake Huron F-16 shootdown footage.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://war.gov/medialink/ufo/061226/release_03/release_03_documents.zip">PURSUE Release 03 — documents bundle</a></span>
+  <span><span class="badge linked">EXTERNAL · ZIP · ~826 MB — TOO LARGE TO MIRROR</span></span></div>
+  <div class="doc-meta">Department of War · 2026-06-12 · 72 files (video ~4.6 GB, via portal)</div>
+  <p>FBI, CIA, NASA and DoW holdings — Harare disc report, 1949 Army flying-saucer study, "mystery orb" videos.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://war.gov/medialink/ufo/071026/release_04/release_04_documents_071026.zip">PURSUE Release 04 — documents bundle</a></span>
+  <span><span class="badge linked">EXTERNAL · ZIP · ~227 MB — TOO LARGE TO MIRROR</span></span></div>
+  <div class="doc-meta">Department of War · 2026-07-10 · 40 files</div>
+  <p>First Department of Energy material: Pantex nuclear plant sightings, 1949 Los Alamos "green fireballs."</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.war.gov/ufo/">PURSUE Release 05 — via portal</a></span>
+  <span><span class="badge linked">EXTERNAL · URL UNCONFIRMED — USE PORTAL</span></span></div>
+  <div class="doc-meta">Department of War · 2026-08-07 · 41 files</div>
+  <p>First FBI FD-302 witness interviews with digital renderings; Gulf of Oman 2021 mass sighting; Bagram 2002 triangle. No direct bundle URL confirmed by research — retrieve from the portal.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.armed-services.senate.gov/imo/media/doc/aaro_statement.pdf">AARO Director Kosloski — SASC Statement for the Record</a></span>
+  <span><span class="badge linked">LINK · PDF · NOT MIRRORED (EGRESS)</span></span></div>
+  <div class="doc-meta">DoD / AARO · 2024-11-19 · baseline context document</div>
+  <p>AARO's pre-PURSUE methodology and findings statement to the Senate Armed Services Committee.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.war.gov/ufo/">war.gov/UFO — PURSUE portal</a></span>
+  <span><span class="badge linked">PORTAL</span></span></div>
+  <div class="doc-meta">Department of War · live since 2026-05-08</div>
+  <p>The official index of all PURSUE releases. Landing page — link-only by design.</p>
+</div>
+
+<div class="doc">
+  <div class="doc-head"><span class="doc-title"><a class="ext" href="https://www.archives.gov/research/catalog/catalog-bulk-downloads/uap-bulk-download">NARA UAP Records Collection (RG 615) — bulk downloads</a></span>
+  <span><span class="badge linked">PORTAL</span></span></div>
+  <div class="doc-meta">National Archives · rolling (statutory, FY2024 NDAA §§1841–1843)</div>
+  <p>The pre-existing statutory collection. No NARA release was confirmed <em>within</em> the May–Aug window; whether RG 615 accessions the PURSUE material is an open question (§8).</p>
+</div>
+
+<h2 id="coverage"><span class="sec-no">§6</span> COVERAGE</h2>
+
+<p>Two stories ran in parallel. Per-outlet detail in
+<a href="news-coverage.md">news-coverage.md</a>.</p>
+
+<h3>The bait-and-switch (aliens.gov)</h3>
+<ul>
+  <li><strong>NPR (06-03)</strong> — definitive walkthrough; flags the "encounters" ticker <em>undercounting</em> vs. Deportation Data Project.</li>
+  <li><strong>NBC4 / TMZ (05-29)</strong> — launch mechanics; teaser-video rundown.</li>
+  <li><strong>Fox News / Townhall / Newsmax (05-29)</strong> — framed as successful trolling; Townhall carries the only official WH statement.</li>
+  <li><strong>TheWrap / HuffPost (05-30)</strong> — backlash documentation.</li>
+  <li><strong>CNN / Just Security (06-03+)</strong> — language and dangerous-speech analyses.</li>
+  <li><strong>NewsNation</strong> — UAP journalist Ross Coulthart: a <em>"puerile effort"</em> that damages genuine disclosure advocacy.</li>
+</ul>
+
+<h3>The actual disclosure (war.gov/UFO)</h3>
+<ul>
+  <li><strong>NPR / Stars and Stripes / Al Jazeera (05-08)</strong> — Release 01 launch; the administration's "make up their own minds" framing.</li>
+  <li><strong>CBS News / EarthSky</strong> — most consistent tranche-by-tranche beat (R02–R05).</li>
+  <li><strong>Axios (06-12)</strong> — R03 incl. purported CIA-destroyed "message from space."</li>
+  <li><strong>The Black Vault / Fox (07-21)</strong> — AARO annual report late; no-ET-evidence line held.</li>
+  <li><strong>TIME (08-06)</strong> — cover feature <em>"America Is Finally Taking Extraterrestrials Seriously"</em>; the window's dominant legacy-media synthesis.</li>
+</ul>
+
+<h3>Polling</h3>
+<div class="tbl-wrap"><table>
+  <tr><th>Poll</th><th>Fielded</th><th>Topline</th></tr>
+  <tr><td>CBS News/YouGov (n=2,023)</td><td>Jun 2–4</td><td>84% say the government knows more about UFOs than it tells; 21% believe ETs have visited.</td></tr>
+  <tr><td>Talker Research (n=2,000)</td><td>Jul 1–6</td><td>37% say 2026 UAP coverage increased their belief in aliens (Gen Z: 54%); 60% say governments know more than shared.</td></tr>
+</table></div>
+
+<h2 id="experts"><span class="sec-no">§7</span> EXPERT PERSPECTIVES</h2>
+
+<p>Full analysis in <a href="expert-perspectives.md">expert-perspectives.md</a>.</p>
+
+<ul>
+  <li><strong>Avi Loeb</strong> — the dossier's March-era outside speculator now <em>chairs the government's UAP Science Advisory Council</em> — and says nothing released so far convinces him of non-human origin ("a distance measurement is worth a thousand words"). His council has no clearances, no budget, no pay; he continues his separate 3I/ATLAS anomaly catalog on Medium.</li>
+  <li><strong>AARO</strong> — position unchanged through five tranches and an annual report: no verifiable ET evidence; ~40% of cases unresolved for lack of data.</li>
+  <li><strong>Whistleblowers</strong> — Grusch escalated (DIA "slush fund" allegation + IG complaint); Elizondo toured 18 states; the ODNI memo channels future whistleblowers to AARO/PURSUE — not to the public.</li>
+  <li><strong>Skeptics</strong> — Shermer joined the council while betting against disclosure, then apologized to Grusch; Mick West fact-checks tranches on Metabunk; Novella: the drops add dots without connecting them. From the other flank, Greer calls the whole process a controlled dead end.</li>
+  <li><strong>The convergence test</strong> — every camp agreed in March that value depends on what gets posted. What got posted made aliens.gov worthless to all of them simultaneously; the same test now applies to war.gov tranche by tranche.</li>
+</ul>
+
+<h2 id="questions"><span class="sec-no">§8</span> OPEN QUESTIONS</h2>
+
+<p>The April questions and their verdicts are scored in
+<a href="open-questions.md">open-questions.md</a>. What remains open, August edition:</p>
+
+<ul>
+  <li>What does <code>alien.gov</code> (singular) actually serve? Needs one fetch from an unrestricted network.</li>
+  <li>Does the UAP Disclosure Act survive NDAA conference — creating the Review Board and the 25-year disclosure clock?</li>
+  <li>What becomes of Grusch's IG complaint, and does the ODNI memo's 30-day POC deadline (~08-30) produce anything?</li>
+  <li>Does PURSUE Release 06 land on cadence (early September), and does any tranche ever contain something AARO calls genuinely anomalous?</li>
+  <li>Does the Governance Board ever get a public charter; does Loeb's council ever get clearances?</li>
+  <li>Does NARA's RG 615 accession the PURSUE material, and on what lag?</li>
+  <li>Why does the aliens.gov ticker undercount its own administration's enforcement statistics?</li>
+</ul>
+
+<h2 id="colophon"><span class="sec-no">§9</span> SOURCES &amp; COLOPHON</h2>
+
+<p>Every URL, with access dates and reliability flags:
+<a href="sources.md">sources.md</a>. Raw captures (WHOIS, DNS, TLS, HTTP, registry CSV):
+<a href="raw/">raw/</a>. Machine-readable document index:
+<a href="documents/manifest.json">documents/manifest.json</a>.</p>
+
+<p><strong>Method.</strong> April snapshot: first-hand WHOIS/DNS/TLS/HTTP captures + reporting.
+August snapshot: first-hand DNS capture; parallel web research for everything else — this
+container's egress proxy blocks direct .gov/.mil/news fetches, so August page-level claims rest
+on search-indexed reporting rather than first-hand fetches, and are flagged in-text wherever
+that distinction matters. Where reporting conflicts, the dossier shows the conflict rather than
+picking a winner.</p>
+
+<p><strong>Design.</strong> Set in the reader's own monospace stack. The stylesheet
+(<a href="assets/ctrl-txt.css">ctrl-txt.css</a>) renders the page as a control-character
+plaintext dossier: character-grid rhythm, box-drawing rules, inverse-video badges, phosphor
+dark / paper light by OS preference.</p>
+
+<hr>
+
+<footer>
+  <p>AGR-2026-001 · rev 2 · 2026-08-23 · open-source research; nothing from a privileged
+  source. This dossier is unaffiliated with the U.S. government, which — after five releases,
+  two boards, one annual report, and 1.7 billion portal hits — officially maintains there is
+  nothing to disclose.<span class="cursor">&nbsp;</span></p>
+</footer>
+
+</main>
+</body>
+</html>
