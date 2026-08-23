@@ -7,7 +7,7 @@ alien material — and on what that directive actually produced.
 
 **Read the dossier as a site: [`index.html`](index.html)** (static, no build step — serve the
 repo root or open the file). Styled by [`assets/ctrl-txt.css`](assets/ctrl-txt.css), ported
-directly from **ctrl-txt.com**'s design system (Sites.S1, `ctrltxt.com/src/partials/styles/`):
+directly from **[ctrltxt.com](https://ctrltxt.com)**'s design system (Sites.S1, `ctrltxt.com/src/partials/styles/`):
 the Redaction + Red Hat Mono pairing, the charcoal-and-gold palette, document-strip nav,
 panels/resource lists, and the homepage's per-character "declassification" title animation
 (Redaction-100 → 35). Fonts are OFL-licensed and vendored in `assets/fonts/`.
