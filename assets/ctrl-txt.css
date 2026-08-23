@@ -607,3 +607,21 @@ pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
 @media (prefers-reduced-motion: reduce) {
     .site-nav-bar, .site-nav a { transition: none; }
 }
+
+/* ── return button to main site ────────────────────────────────────── */
+
+.site-nav .nav-return {
+    color: var(--link-color);
+    border: 1px solid #6b5a3a;
+    padding: 0.2em 0.65em;
+    border-radius: 2px;
+    text-transform: lowercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+.site-nav .nav-return::after { display: none; }
+.site-nav .nav-return:hover {
+    color: #1a1a1a;
+    background: var(--link-color);
+    border-color: var(--link-color);
+}
